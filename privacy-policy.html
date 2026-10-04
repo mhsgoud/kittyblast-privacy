@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — Kitty Blast</title>
-  <meta name="description" content="Privacy Policy for the Kitty Blast mobile game (com.kittyblast.game)." />
+  <title>Privacy Policy — Kitty Arcade</title>
+  <meta name="description" content="Privacy Policy for Kitty Arcade (com.kittyblast.game)." />
   <style>
     :root {
       --ink: #f4e9ff;
@@ -57,12 +57,6 @@
     p, li { margin: 0.55rem 0; }
     ul { padding-left: 1.2rem; }
     a { color: var(--pink); }
-    code {
-      font-size: 0.92em;
-      background: #1a0a35;
-      padding: 0.1em 0.35em;
-      border-radius: 4px;
-    }
     .card {
       background: color-mix(in srgb, var(--panel) 88%, black);
       border: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
@@ -81,26 +75,29 @@
 </head>
 <body>
   <header>
-    <p class="eyebrow">Kitty Blast</p>
+    <p class="eyebrow">Kitty Arcade</p>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: 25 July 2026 · Package: <code>com.kittyblast.game</code></p>
+    <p class="meta">Effective date: 4 October 2026 · Package: <code>com.kittyblast.game</code></p>
   </header>
 
   <p>
-    This Privacy Policy explains how <strong>Kitty Blast</strong> (“the App”, “we”, “us”)
+    This Privacy Policy explains how <strong>Kitty Arcade</strong> (“the App”, “we”, “us”)
     handles information when you use our Android game published on Google Play.
+    Kitty Arcade includes multiple puzzle modes (including Kitty Blast, PawSweep, and Purr Match).
   </p>
 
   <div class="card">
     <p style="margin:0">
-      Short version: we store your optional display name and game scores for the leaderboard,
-      show ads via Unity LevelPlay, and keep progress on your device. We do not sell your personal information.
+      Short version: we store your optional display name and high scores for the winners boards,
+      show ads via Unity LevelPlay, use Firebase Analytics for basic app measurement, and keep
+      progress on your device. In-app purchases may be offered later via Google Play / RevenueCat
+      but are currently disabled. We do not sell your personal information.
     </p>
   </div>
 
   <h2>1. Who we are</h2>
   <p>
-    Kitty Blast is a free-to-play puzzle game (with ads). Contact:
+    Kitty Arcade is a free-to-play puzzle collection (with ads). Contact:
     <a href="mailto:kittyblast.support@gmail.com">kittyblast.support@gmail.com</a>
   </p>
 
@@ -108,29 +105,41 @@
   <p>Depending on how you use the App, we may process:</p>
   <ul>
     <li>
-      <strong>Display name</strong> — an optional nickname you enter for the global ranks /
-      leaderboard.
+      <strong>Display name</strong> — an optional nickname you enter for the winners /
+      leaderboard tables.
     </li>
     <li>
-      <strong>Gameplay data</strong> — such as high score, max level reached, and kittens freed,
-      used to show rankings and improve the experience.
+      <strong>Gameplay data</strong> — such as high score, max level reached, and mode-specific
+      extras (for example kittens freed), used to show top-20 boards per game and improve the experience.
     </li>
     <li>
       <strong>Device / app identifiers</strong> — a random app-generated device id used to update
-      your leaderboard row, plus advertising identifiers processed by our ads partner (see below).
+      your leaderboard row, advertising identifiers processed by our ads partner, and identifiers
+      used by analytics / purchase SDKs when enabled.
     </li>
     <li>
       <strong>Local game progress</strong> — scores, unlocked levels, settings, and similar data
-      stored on your device (for example via app preferences).
+      stored on your device (for example via app preferences or browser storage inside a game mode).
+    </li>
+    <li>
+      <strong>Analytics events</strong> — basic usage events (such as app opens) via
+      <strong>Google Firebase Analytics</strong>.
+    </li>
+    <li>
+      <strong>Purchase data</strong> — if / when in-app purchases are re-enabled, Google Play Billing
+      and <strong>RevenueCat</strong> process purchase tokens and entitlement status. Payments are
+      currently disabled in the App.
     </li>
   </ul>
   <p>We do not ask for your real name, email, phone number, contacts, photos, or precise location.</p>
 
   <h2>3. How we use information</h2>
   <ul>
-    <li>Provide core game features (progress, settings, ranks).</li>
-    <li>Sync and display optional leaderboard scores.</li>
+    <li>Provide core game features (progress, settings, winners boards).</li>
+    <li>Sync and display optional per-game high scores (top 20).</li>
     <li>Show advertisements that help keep the game free.</li>
+    <li>Understand aggregate usage via Firebase Analytics.</li>
+    <li>Restore purchases / entitlements when payments are enabled.</li>
     <li>Respond to support or feedback requests you send us.</li>
   </ul>
 
@@ -151,74 +160,97 @@
     advertising ID / privacy controls on your Android version).
   </p>
 
-  <h2>5. Leaderboard / cloud sync</h2>
+  <h2>5. Analytics (Firebase)</h2>
   <p>
-    If you use Save &amp; Sync / RANKS, we send your display name, scores, and device id to our
-    backend (hosted with Supabase) so rankings can be shown to other players.
+    We use <strong>Google Firebase Analytics</strong> to understand how the App is used
+    (for example installs and session counts). See
+    <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer" target="_blank">Firebase Privacy</a>
+    and Google’s
+    <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Privacy Policy</a>.
+  </p>
+
+  <h2>6. Purchases (when enabled)</h2>
+  <p>
+    Optional one-time unlocks may use <strong>Google Play Billing</strong> and
+    <strong>RevenueCat</strong> to validate purchases. Those services process purchase-related
+    identifiers according to their policies. While payments are disabled, the App does not
+    initiate purchase flows.
+  </p>
+  <p>
+    RevenueCat:
+    <a href="https://www.revenuecat.com/privacy" rel="noopener noreferrer" target="_blank">Privacy Policy</a>.
+  </p>
+
+  <h2>7. Winners boards / cloud sync</h2>
+  <p>
+    If you sync scores or open Winners / RANKS, we send your display name, scores, level progress,
+    and device id to our backend (hosted with Supabase) so top-20 tables can be shown per game mode.
     Do not put sensitive personal data in your display name.
   </p>
 
-  <h2>6. Sharing</h2>
+  <h2>8. Sharing</h2>
   <p>We share data only as needed to operate the App:</p>
   <ul>
     <li><strong>Unity LevelPlay / ironSource and ad network partners</strong> — advertising and related measurement.</li>
-    <li><strong>Infrastructure providers</strong> — e.g. Supabase hosting for leaderboard storage.</li>
+    <li><strong>Google Firebase / Google</strong> — analytics.</li>
+    <li><strong>RevenueCat / Google Play</strong> — purchases when enabled.</li>
+    <li><strong>Infrastructure providers</strong> — e.g. Supabase hosting for score storage.</li>
     <li><strong>Legal requirements</strong> — if required by law or to protect rights and safety.</li>
   </ul>
   <p>We do <strong>not</strong> sell your personal information.</p>
 
-  <h2>7. Data retention</h2>
+  <h2>9. Data retention</h2>
   <ul>
     <li>Local progress remains on your device until you clear app data or uninstall.</li>
-    <li>Leaderboard entries are kept while the service is offered, or until you request deletion.</li>
-    <li>Ad partners retain data under their own policies.</li>
+    <li>Leaderboard / winners entries are kept while the service is offered, or until you request deletion.</li>
+    <li>Ad, analytics, and purchase partners retain data under their own policies.</li>
   </ul>
 
-  <h2>8. Children’s privacy</h2>
+  <h2>10. Children’s privacy</h2>
   <p>
-    Kitty Blast is a general-audience puzzle game and is <strong>not directed at children under 13</strong>
+    Kitty Arcade is a general-audience puzzle collection and is <strong>not directed at children under 13</strong>
     (or the equivalent age in your country). We do not knowingly collect personal information from children.
     If you believe a child provided data, contact us and we will delete it.
   </p>
 
-  <h2>9. Your choices &amp; deletion</h2>
+  <h2>11. Your choices &amp; deletion</h2>
   <ul>
     <li>Change or clear your display name in the App.</li>
     <li>Reset local progress from Settings (where available) or by clearing app storage / uninstalling.</li>
     <li>
-      Request deletion of your leaderboard data by emailing
+      Request deletion of your winners / leaderboard data by emailing
       <a href="mailto:kittyblast.support@gmail.com">kittyblast.support@gmail.com</a>
       with your display name and approximate device / install details.
     </li>
   </ul>
 
-  <h2>10. Security</h2>
+  <h2>12. Security</h2>
   <p>
     We use HTTPS for network requests. No method of transmission or storage is 100% secure;
     please use a non-identifying display name.
   </p>
 
-  <h2>11. International users</h2>
+  <h2>13. International users</h2>
   <p>
     If you play from outside the country where our servers or partners operate, your information
     may be processed in other countries that may have different data-protection laws.
   </p>
 
-  <h2>12. Changes</h2>
+  <h2>14. Changes</h2>
   <p>
     We may update this Policy from time to time. The “Effective date” above will change when we do.
     Continued use of the App after an update means you accept the revised Policy.
   </p>
 
-  <h2>13. Contact</h2>
+  <h2>15. Contact</h2>
   <p>
     Questions about privacy:<br />
     Email: <a href="mailto:kittyblast.support@gmail.com">kittyblast.support@gmail.com</a><br />
-    App: Kitty Blast (<code>com.kittyblast.game</code>)
+    App: Kitty Arcade (<code>com.kittyblast.game</code>)
   </p>
 
   <footer>
-    © 2026 Kitty Blast. This page is provided for Google Play and in-app privacy disclosures.
+    © 2026 Kitty Arcade. This page is provided for Google Play and in-app privacy disclosures.
   </footer>
 </body>
 </html>
